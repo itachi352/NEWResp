@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn Page</title>
+    <link rel="icon" type="image/x-icon" href="pngtree-vector-login-icon-login-design-shadow-vector-picture-image_9501563.png">
+    <style>
+        body {
+            background-image: url(feminine-soft-pastel-colors-splash-background-free-photo.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        form {
+            border: 3px;
+            border-color: rgba(120, 83, 145, 0.452);
+            display: flex;
+            text-align: justify;
+            flex-direction: column;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 9% auto;
+            width: fit-content;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: rgba(120, 83, 145, 0.452);
+
+        }
+
+        h3 {
+
+            text-align: center;
+        }
+
+        #button {
+            border-radius: 20px;
+            border-color: rgba(103, 71, 177, 0.637) solid;
+            font-family: monospace;
+            background-color: rgb(255, 255, 255);
+            width: 300px;
+            height: 35px;
+        }
+
+        .Mail {
+            background-image: url(png-transparent-email-email-thumbnail.png);
+
+            background-position: right;
+
+            background-repeat: no-repeat;
+            background-size: 20px;
+            border-color: rgba(226, 229, 232, 0.361);
+            border-radius: 7px;
+            width: 100%;
+            height: 25px;
+
+        }
+
+        .password {
+            background-image: url(pngtree-black-lock-icon-image_1130364.jpg);
+            background-position: right;
+
+            background-repeat: no-repeat;
+            background-size: 20px;
+            border-color: rgba(226, 229, 232, 0.361);
+            border-radius: 7px;
+            width: 100%;
+            height: 25px;
+        }
+        a {
+            color: white;
+            text-align: right;
+        }
+
+        #button:hover {
+            background-color: aquamarine;
+            cursor: pointer;
+
+
+        }
+       .fp{
+      font-size: smaller;
+       }
+      
+           </style>
+</head>
+
+<body>
+    <form action="">
+        <h3>LogIn</h3>
+
+        <label for="mail" class="mm">Username</label>
+        <input type="text" placeholder="Enter Your Username..." class="Mail" required>
+        <label for="password" class="pp">Password</label>
+        <input type="password" placeholder="Enter Your Password... " class="password" required><br>
+        <div>
+            <input type="checkbox" id="scales" name="Remember" unchecked />
+            <label for="scales">Remember Me</label>
+        </div>
+        <br>
+        <input type="button" id="button" value="Login">
+        <a href="https://www.figmentagency.com/wp-content/uploads/2015/08/Fotolia_84625850_XS.jpg" class="fp">Forgot Password?</a>
+    </form>
+    <script>
+
+        function handleClick() {
+            window.location.href = 'https://i.imgflip.com/3vv5w1.jpg';
+        }
+        document.getElementById('button').onclick = handleClick;
+    </script>
+</body>
+
+</html>
