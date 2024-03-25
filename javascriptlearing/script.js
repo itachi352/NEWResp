@@ -28,18 +28,17 @@ let c = Math.random() * 100;
 
 console.log(c);
 
-    if (c <= 10) {
-      console.log("sum:" + pow(a, b));
-      console.log("Mutiply:" + div(a, b));
-      console.log("Division:" + mult(a, b));
-      console.log("Subtraction:" + sum(a, b));
-      console.log("Power:" + sub(a, b));
-    }
-    
-    console.log("sum:" + sum(a, b));
-    console.log("Mutiply:" + mult(a, b));
-    console.log("Division:" + div(a, b));
-    console.log("Subtraction:" + sub(a, b));
-    console.log("Power:" + pow(a, b));
- 
-
+if (c <= 10) {
+  console.log("sum:" + pow(a, b));
+  console.log("Mutiply:" + div(a, b));
+  console.log("Division:" + mult(a, b));
+  console.log("Subtraction:" + sum(a, b));
+  console.log("Power:" + sub(a, b));
+} 
+else {
+  console.log("sum:" + sum(a, b));
+  console.log("Mutiply:" + mult(a, b));
+  console.log("Division:" + div(a, b));
+  console.log("Subtraction:" + sub(a, b));
+  console.log("Power:" + pow(a, b));
+}
