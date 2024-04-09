@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Pakistan | Cricket World</title>
+  <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0; 
+    }
+    .team-flag {
+        height: 200px; 
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+    .team-flag:hover {
+        transform: scale(1.05);
+    }
+    .player-card {
+        transition: all 0.3s ease;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin-bottom: 20px;
+        background-color: #fff; 
+    }
+    .player-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    .pagination li {
+        display: inline;
+        margin: 0 5px;
+    }
+    .small-round-pic {
+        width: 80px;
+        height: 80px;
+        background-color: #ccc;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+    .small-round-pic:hover {
+        transform: scale(1.1);
+    }
+    .small-round-pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .player-name {
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #333; /* Dark gray color */
+        text-align: center;
+    }
+    .team-heading {
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333; /* Dark gray color */
+        text-transform: uppercase;
+    }
+    .card-img-top {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        position: relative;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .img2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 80px;
+        opacity: 0.8;
+        transition: all 0.3s ease;
+    }
+    .img2:hover {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    .btn {
+        background-color: #333;
+        color: white;
+        padding: 8px 15px;
+        border: none;
+        cursor: pointer;
+        width: auto;
+        transition: all 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <video src="imgs/Y2meta.app - Presenting The Official Pakistan T20I Thunder Jersey'22 ⚡.mp4" muted loop autoplay class=" team-flag">
+            </div>
+            <h2 class="team-heading">Pakistani Team</h2>
+            <div class="card-body">
+                <h5 class="card-title" style="text-align: center;">Frequently Searched Players</h5>
+                <div class="player-name">King Amir</div>
+                <div class="small-round-pic"><img src="imgs/kingamir.jpg" alt=""></div>
+                <div class="player-name">Fouji Zaman</div>
+                <div class="small-round-pic"><img src="imgs/fakharzaman.webp" alt=""></div>
+                <div class="player-name">PM IMRAN</div>
+                <div class="small-round-pic"><img src="imgs/imran.jpg" alt=""></div>
+                <div class="player-name">Chota Afridi</div>
+                <div class="small-round-pic"><img src="imgs/sheen.webp" alt=""></div>
+                <div class="player-name">Sir Rizwan</div>
+                <div class="small-round-pic"><img src="imgs/rizwan.jpg" alt=""></div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card player-card">
+                        <img src="imgs/f816f6ede079ba80b7782d4b15a1b22c.jpg" alt="" class="card-img-top">
+                        <img src="imgs/babarfront.webp" alt="" class="img2">
+                        <div class="card-body">
+                            <h5 class="card-title">King Babar</h5>
+                            <a href="playercard.html" target="_blank" class="btn btn-primary">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card player-card">
+                        <img src="imgs/bannerfakhr.jpeg" alt="" class="card-img-top">
+                        <img src="imgs/fakhrfront.png" alt="" class="img2" style="width:120px ;">
+                        <div class="card-body">
+                            <h5 class="card-title">Fouji Zaman</h5>
+                            <a href="#" class="btn btn-primary">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+    
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
