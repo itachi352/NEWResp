@@ -9,7 +9,6 @@ html {
 }
 
 body {
-
   background-color: #333;
   font-family: sans-serif;
   position: relative;
@@ -25,22 +24,19 @@ body {
   bottom: 5px;
   right: 5px;
   z-index: 1;
-
-  a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: #555;
-  }
-
 }
+
+#scrollbtn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #555;
+}
+
 .card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-}
-
-.card {
   position: relative;
 }
 
@@ -48,6 +44,8 @@ body {
   height: 100%;
   width: auto;
   position: relative;
+  filter: blur(3px);
+  transition: filter 0.3s linear;
 }
 
 .img2 {
@@ -112,6 +110,7 @@ table td {
   color: #fff;
   padding: 12px;
   text-align: center;
+  border: 1px solid #fff;
 }
 
 table th {
@@ -126,11 +125,6 @@ table tbody tr:hover {
   background-color: #777;
 }
 
-table th,
-table td {
-  border: 1px solid #fff;
-}
-
 table th:hover {
   background-color: #555;
 }
@@ -139,30 +133,28 @@ table tbody tr {
   transition: background-color 0.3s ease;
 }
 
-.card {
-  .img2 {
-    opacity: 1;
-    transition: opacity 1.5s linear;
-  }
+.card .img2 {
+  opacity: 1;
+  transition: opacity 1.5s linear;
+}
 
-  .card-img-top {
-    filter: blur(3px);
-    transition: filter 0.3s linear;
-  }
+.card .card-img-top {
+  filter: blur(3px);
+  transition: filter 0.3s linear;
+}
 
-  h4 {
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 1s ease 1s;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    position: absolute;
-    left: 0;
-    right: 0;
-  }
+.card h4 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 1s ease 1s;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 .card:hover {
@@ -187,7 +179,6 @@ table tbody tr {
 }
 
 #about h2 {
- 
   margin-bottom: 20px;
 }
 
@@ -207,10 +198,10 @@ table tbody tr {
 @media (max-width: 768px) {
   #about .col-md-6 {
     text-align: center;
+  }
 
-    img {
-      width: 50%;
-    }
+  #about .col-md-6 img {
+    width: 50%;
   }
 }
 
@@ -237,33 +228,22 @@ table tbody tr {
 }
 
 .container {
-    min-height: 100vh;
-    overflow-y: auto;
-}
-
-.container
-{
+  min-height: 100vh;
+  overflow-y: auto;
   opacity: 0;
   filter: blur(4px);
   transform: translateY(-100%);
   transition: all 1.5s;
 }
-/* .container:nth-child(even)
-{
-  opacity: 0;
-  filter: blur(4px);
-  transform: translateY(100%);
-  transition: all 1.5s;
-} */
-.show
-{
+
+.show {
   opacity: 1;
   filter: blur(0px);
   transform: translateY(0);
 }
-@media(prefers-reduced-motion)
-{
-  .container{
+
+@media (prefers-reduced-motion) {
+  .container {
     transition: none;
   }
 }
