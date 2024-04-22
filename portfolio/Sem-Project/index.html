@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="public/assets/img/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <title>Voyager</title>
+  </head>
+  <body
+    class="font-baloo scroll-smooth dark:bg-secondary dark:text-white overflow-x-hidden">
+    <!-- ========== HEADER ========== -->
+    <header
+      class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm fixed">
+      <nav
+        class="mt-6 relative max-w-[85rem] w-full bg-gray-600 bg-opacity-50 backdrop-blur-md rounded-[36px] mx-2 py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-6 lg:px-8 xl:mx-auto dark:bg-primary/[.8]"
+        aria-label="Global">
+        <div class="flex items-center justify-between">
+          <a
+            class="flex-none text-xl font-semibold dark:text-white"
+            href="./index.html"
+            aria-label="Brand">
+            <img src="./public/assets/img/logo.png" alt="" class="h-10 ml-4 invert dark:invert-0" />
+          </a>
+          <div class="md:hidden">
+            <button
+              type="button"
+              class="hs-collapse-toggle size-8 flex justify-center items-center text-sm font-semibold rounded-full border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+              data-hs-collapse="#navbar-collapse-with-animation"
+              aria-controls="navbar-collapse-with-animation"
+              aria-label="Toggle navigation">
+              <svg
+                class="hs-collapse-open:hidden flex-shrink-0 size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="3" x2="21" y1="6" y2="6" />
+                <line x1="3" x2="21" y1="12" y2="12" />
+                <line x1="3" x2="21" y1="18" y2="18" />
+              </svg>
+              <svg
+                class="hs-collapse-open:block hidden flex-shrink-0 size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          id="navbar-collapse-with-animation"
+          class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full md:block">
+          <div
+            class="flex flex-col gap-y-6 gap-x-0 mt-5 md:flex-row md:items-center items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:ps-7 text-lg">
+            <a
+              class="font-medium text-blue-600 md:py-6 dark:text-white"
+              href="#"
+              aria-current="page">
+              <i class="fa fa-house mr-1"></i>
+              Home
+            </a>
+            <a
+              class="font-medium text-zinc-100 hover:text-secondary md:py-6 dark:text-gray-400 dark:hover:text-white"
+              href="./about.html">
+              <i class="fa fa-info-circle mr-1"></i>
+              About</a
+            >
+            <a
+              class="font-medium text-zinc-100 hover:text-secondary md:py-6 dark:text-gray-400 dark:hover:text-white"
+              href="#trips">
+              <i class="fa fa-globe-asia mr-1"></i>
+              Trips</a
+            >
+            <a
+              class="font-medium text-zinc-100 hover:text-secondary md:py-6 dark:text-gray-400 dark:hover:text-white"
+              href="#contact-us">
+              <i class="fa fa-at mr-1"></i>
+              Contact</a
+            >
+            <a
+              class="flex items-center gap-x-2 font-medium text-white hover:text-secondary md:border-s md:border-gray-300 md:my-6 md:ps-6 dark:text-gray-400 dark:hover:text-white"
+              href="#">
+              <svg
+                class="flex-shrink-0 size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+              Log in
+            </a>
+            <button
+              type="button"
+              class="ml-8 hs-dark-mode-active:hidden hs-dark-mode group flex items-center hover:text-blue-600 font-medium dark:text-gray-400 dark:hover:text-white"
+              data-hs-theme-click-value="dark">
+              <svg
+                class="flex-shrink-0 size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+              </svg>
+              <span class="sr-only">Dark Theme</span>
+            </button>
+            <button
+              type="button"
+              class="ml-8 hs-dark-mode-active:block hidden hs-dark-mode group flex items-center text-gray-600 hover:text-blue-600 font-medium dark:text-gray-400 dark:hover:text-white"
+              data-hs-theme-click-value="light">
+              <svg
+                class="flex-shrink-0 size-5"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#Ebb11d"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 8a2 2 0 1 0 4 4" />
+                <path d="M12 2v2" />
+                <path d="M12 20v2" />
+                <path d="m4.93 4.93 1.41 1.41" />
+                <path d="m17.66 17.66 1.41 1.41" />
+                <path d="M2 12h2" />
+                <path d="M20 12h2" />
+                <path d="m6.34 17.66-1.41 1.41" />
+                <path d="m19.07 4.93-1.41 1.41" />
+              </svg>
+              <span class="sr-only">Light Theme</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="min-h-[700px] h-screen flex items-center relative">
+      <div class="absolute inset-0">
+        <div
+          data-hs-carousel='{
+          "loadingClasses": "opacity-0",
+          "isAutoPlay": true
+        }'
+          class="relative">
+          <div
+            class="hs-carousel relative overflow-hidden min-h-[700px] h-screen bg-white">
+            <div
+              class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
+              <div class="hs-carousel-slide">
+                <img
+                  src="./public/assets/img/hero-bg-1.png"
+                  alt=""
+                  class="h-full w-full object-cover object-center" />
+              </div>
+              <div class="hs-carousel-slide">
+                <img
+                  src="./public/assets/img/hero-bg-2.png"
+                  alt=""
+                  class="h-full w-full object-cover object-center" />
+              </div>
+              <div class="hs-carousel-slide">
+                <img
+                  src="./public/assets/img/hero-bg-3.png"
+                  alt=""
+                  class="h-full w-full object-cover object-center" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="z-10 lg:pl-10 w-full bg-gradient-to-t from-black/[.9] from-10% via-transparent to-black/[.7] flex items-center min-h-[700px] h-screen">
+        <div
+          class="container max-w-[1300px] dark:border dark:border-zinc-700 max-lg:mx-5 px-9 py-10 ml-10 w-fit text-white dark:bg-zinc-900/[.75] rounded-3xl md:w-9/12 md:mx-9 flex flex-col gap-4">
+          <h2
+            class="text-pretty text-lg sm:text-5xl md:text-6xl font-bold font-poppins">
+            Explore the world with exciting people
+          </h2>
+          <p>
+            We help people find co travellers and also structure their travel
+            plans
+          </p>
+          <button
+            class="w-max px-6 py-2 z-20 hover:bg-opacity-90 text-white hover:text-black rounded-sm relative overflow-hidden group transition-all duration-500 ease-out">
+            <span
+              class="bg-slime shadow-[0_0_10px_#ccf32f] inline-block h-full w-1 group-hover:w-full absolute top-0 left-0 -z-10 transition-all duration-300 ease-out"></span>
+            Take a Trip <i class="fa fa-arrow-right align-middle ml-2"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- ========== END HERO SECTION ========== -->
+
+    <section class="bg-slime p-10 relative overflow-x-clip">
+      <div
+        class="absolute top-[15%] h-16 w-[110%] px-3 -translate-x-10 flex justify-around items-center gap-5 bg-darkBlue text-white text-xl md:text-2xl rotate-2 md:rotate-1 z-10">
+        <span>Explore</span>
+        <span>Adventure</span>
+        <span>Luxury</span>
+        <span>Enjoy</span>
+        <span>Explore</span>
+        <span>Adventure</span>
+        <span class="max-sm:invisible">Luxury</span>
+        <span class="max-sm:invisible">Enjoy</span>
+      </div>
+    </section>
+
+    <section class="sm:p-10 bg-[#D9ED82] dark:bg-zinc-700 font-poppins">
+      <div
+        class="container max-w-[1300px] flex flex-col lg:flex-row gap-10 justify-center text-secondary dark:text-white divide-y-2 divide-secondary dark:divide-white lg:divide-y-0 text-center">
+        <div
+          class="px-4 py-8 w-2/3 min-w-[300px] mx-auto md:w-fit flex flex-col gap-2">
+          <i
+            class="fa fa-4x fa-shield-alt text-zinc-800 dark:dark:text-[#CCF32F] text-center mb-4"></i>
+          <h3 class="text-3xl">Enjoy some flexibility</h3>
+          <p class="text-sm">
+            stays with flexible cancelation make it easy to re-book if your
+            plans change
+          </p>
+        </div>
+        <div
+          class="px-4 py-8 w-2/3 min-w-[300px] mx-auto md:w-fit flex flex-col gap-2">
+          <i
+            class="fa fa-4x fa-plane-up text-darkBlue text-center mb-4 dark:text-[#CCF32F]"></i>
+          <h3 class="text-3xl">Over 2 million active trips</h3>
+          <p class="text-sm">
+            stays with flexible cancelation make it easy to re-book if your
+            plans change
+          </p>
+        </div>
+        <div
+          class="px-4 py-8 w-2/3 min-w-[300px] mx-auto md:w-fit flex flex-col gap-2">
+          <i
+            class="fa fa-4x fa-fire text-darkBlue text-center dark:text-[#CCF32F] mb-4"></i>
+          <h3 class="text-3xl">The Best you can find</h3>
+          <p class="text-sm">
+            stays with flexible cancelation make it easy to re-book if your
+            plans change
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== GET-PACKING SECTION ========== -->
+    <section class="container px-5 py-16 text-gray-600 dark:text-white">
+      <div class="font-semibold mb-5">
+        <p>Where do you want to go</p>
+        <div
+          class="flex justify-between items-center flex-col lg:flex-row gap-5">
+          <h2 class="text-5xl">
+            Lets us worry about your plans,
+            <span class="lg:block"
+              >Just get packed <i class="fa fa-"></i>
+            </span>
+          </h2>
+
+          <button
+            class="w-max px-6 py-2 z-20 hover:bg-opacity-90rounded-sm relative overflow-hidden group transition-all duration-500 ease-out">
+            <span
+              class="bg-slime shadow-[0_0_10px_#ccf32f] inline-block h-full w-1 group-hover:w-full absolute top-0 left-0 -z-10 transition-all duration-300 ease-out"></span>
+            Take a Trip <i class="fa fa-arrow-right align-middle ml-2"></i>
+          </button>
+        </div>
+      </div>
+      <div class="mx-auto flex flex-wrap items-center">
+        <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+          <img
+            alt="feature"
+            class="object-cover object-center h-full w-full"
+            src="./public/assets/img/location.png" />
+        </div>
+        <div
+          class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
+          <div class="flex flex-col mb-10 lg:items-start items-center">
+            <div
+              class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-zinc-200 text-zinc-800 mb-5">
+              <i class="fa fa-car"></i>
+            </div>
+            <div class="flex-grow">
+              <h2
+                class="text-gray-900 font-medium mb-3 dark:text-white text-3xl">
+                Rent a car
+              </h2>
+              <p class="leading-relaxed text-base">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+                amet eligendi corrupti quidem commodi odio?
+              </p>
+              <a
+                class="mt-3 text-emerald-500 dark:text-slime inline-flex items-center gap-1 cursor-pointer group">
+                <span class="hover:underline underline-offset-2">Let's go</span>
+                <i
+                  class="fa-solid fa-arrow-right transition-all duration-300 group-hover:scale-105 group-hover:translate-x-1"></i>
+              </a>
+            </div>
+          </div>
+          <div class="flex flex-col mb-10 lg:items-start items-center">
+            <div
+              class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-zinc-200 text-zinc-800 mb-5">
+              <i class="fa fa-bed"></i>
+            </div>
+            <div class="flex-grow">
+              <h2
+                class="text-gray-900 dark:text-white text-3xl font-medium mb-3">
+                Get a hotel
+              </h2>
+              <p class="leading-relaxed text-base">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Incidunt reiciendis molestias ut soluta iste culpa?
+              </p>
+              <a
+                class="mt-3 text-emerald-500 dark:text-slime inline-flex items-center gap-1 cursor-pointer group">
+                <span class="hover:underline underline-offset-2">Let's go</span>
+                <i
+                  class="fa-solid fa-arrow-right transition-all duration-300 group-hover:scale-105 group-hover:translate-x-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========== END GET-PACKING SECTION ========== -->
+
+    <!-- ========== TRIPS SECTION ========== -->
+    <section
+      id="trips"
+      class="container scroll-m-10 px-5 py-16 text-gray-600 dark:text-white">
+      <div class="text-center font-semibold mb-5">
+        <div>Trip Gallery</div>
+        <h2 class="text-5xl max-sm:text-3xl">Completed Journeys</h2>
+      </div>
+
+      <section class="grid grid-cols-1 lg:grid-cols-3 gap-7 auto-rows-[340px]">
+        <div
+          class="relative text-white shadow-sm rounded-xl dark:bg-slate-900 dark:shadow-slate-700/[.7] grayscale-[.6] hover:grayscale-0 cursor-pointer transition-all duration-300">
+          <img
+            class="w-full h-full object-cover rounded-xl"
+            src="https://cdn.britannica.com/88/80588-050-8D944BFE/Leaning-Tower-of-Pisa-Italy.jpg"
+            alt="Image Description" />
+          <div
+            class="absolute pt-8 bg-gradient-to-t from-stone-900/[.8] from-25% to-transparent bottom-0 start-0 end-0 rounded-lg">
+            <div class="p-4 md:p-5">
+              <h3 class="text-3xl">Leaning Tower of Pisa</h3>
+              <p class="mt-1 text-sm">Italy, 24 Trips</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative text-white shadow-sm rounded-xl dark:bg-slate-900 dark:shadow-slate-700/[.7] lg:col-span-2 grayscale-[.6] hover:grayscale-0 cursor-pointer transition-all duration-300">
+          <img
+            class="w-full h-full object-cover rounded-xl"
+            src="https://w0.peakpx.com/wallpaper/835/227/HD-wallpaper-badshahi-mosque-mo-lahore-muslim-pakistan.jpg"
+            alt="Image Description" />
+          <div
+            class="absolute pt-8 bg-gradient-to-t from-stone-900/[.8] from-25% to-transparent bottom-0 start-0 end-0 rounded-lg">
+            <div class="p-4 md:p-5">
+              <h3 class="text-3xl">Badshahi Mosque</h3>
+              <p class="mt-1 text-sm">Pakistan, 40 Trips</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative text-white shadow-sm rounded-xl dark:bg-slate-900 dark:shadow-slate-700/[.7] grayscale-[.6] hover:grayscale-0 cursor-pointer transition-all duration-300">
+          <img
+            class="w-full h-full object-cover rounded-xl"
+            src="https://5bestincity.com/blog/wp-content/uploads/2022/04/places-to-visit-in-Italy-Rome.jpg"
+            alt="Image Description" />
+          <div
+            class="absolute pt-8 bg-gradient-to-t from-stone-900/[.8] from-25% to-transparent bottom-0 start-0 end-0 rounded-lg">
+            <div class="p-4 md:p-5">
+              <h3 class="text-3xl">Colosseum</h3>
+              <p class="mt-1 text-sm">Italy, 20 Trips</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative text-white shadow-sm rounded-xl dark:bg-slate-900 dark:shadow-slate-700/[.7] grayscale-[.6] hover:grayscale-0 cursor-pointer transition-all duration-300">
+          <img
+            class="w-full h-full object-cover rounded-xl"
+            src="https://www.tripsavvy.com/thmb/cmbBNnmz6LcVglYgQ2WMvSGyf6M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/downtown-las-vegas-at-night--usa-577577051-50511f3dfce94a5e847ea448b7351ca2.jpg"
+            alt="Image Description" />
+          <div
+            class="absolute pt-8 bg-gradient-to-t from-stone-900/[.8] from-25% to-transparent bottom-0 start-0 end-0 rounded-lg">
+            <div class="p-4 md:p-5">
+              <h3 class="text-3xl">Las Vegas</h3>
+              <p class="mt-1 text-sm">USA, 35 Trips</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative text-white shadow-sm rounded-xl dark:bg-slate-900 dark:shadow-slate-700/[.7] grayscale-[.6] hover:grayscale-0 cursor-pointer transition-all duration-300">
+          <img
+            class="w-full h-full object-cover rounded-xl"
+            src="https://img.traveltriangle.com/blog/wp-content/uploads/2023/06/PTV-India-OG-Final.png"
+            alt="Taj Mahal" />
+          <div
+            class="absolute pt-8 bg-gradient-to-t from-stone-900/[.8] from-25% to-transparent bottom-0 start-0 end-0 rounded-lg">
+            <div class="p-4 md:p-5">
+              <h3 class="text-3xl">Taj Mahal</h3>
+              <p class="mt-1 text-sm">India, 57 Trips</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="flex justify-center">
+        <button
+          class="w-max mx-auto my-5 px-6 py-2 z-20 bg-slime text-primary shadow-[0_0_10px_#ccf32f] hover:bg-opacity-90rounded-sm relative overflow-hidden group transition-all duration-500 ease-out rounded-full font-semibold text-xl group">
+          See all Trip
+          <i
+            class="fa fa-arrow-right align-middle ml-2 transition-all duration-200 group-hover:scale-x-105 group-hover:translate-x-1"></i>
+        </button>
+      </div>
+    </section>
+    <!-- ========== END TRIPS SECTION ========== -->
+
+    <!-- ========== TESTIOMNIALS ========== -->
+    <section class="container px-5 py-16 text-gray-600 dark:text-white">
+      <div class="text-center font-semibold mb-5">
+        <div>Testimonials</div>
+        <h2 class="text-5xl max-sm:text-3xl">Don't take Our word for it</h2>
+      </div>
+
+      <section class="text-gray-600 body-font *:basis-1/3">
+        <div class="container px-5 py-16 mx-auto">
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-11">
+            <blockquote class="relative">
+              <svg
+                class="absolute -top-6 -start-8 size-16 text-gray-400 dark:text-gray-700"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path
+                  d="M7.39762 10.3C7.39762 11.0733 7.14888 11.7 6.6514 12.18C6.15392 12.6333 5.52552 12.86 4.76621 12.86C3.84979 12.86 3.09047 12.5533 2.48825 11.94C1.91222 11.3266 1.62421 10.4467 1.62421 9.29999C1.62421 8.07332 1.96459 6.87332 2.64535 5.69999C3.35231 4.49999 4.33418 3.55332 5.59098 2.85999L6.4943 4.25999C5.81354 4.73999 5.26369 5.27332 4.84476 5.85999C4.45201 6.44666 4.19017 7.12666 4.05926 7.89999C4.29491 7.79332 4.56983 7.73999 4.88403 7.73999C5.61716 7.73999 6.21938 7.97999 6.69067 8.45999C7.16197 8.93999 7.39762 9.55333 7.39762 10.3ZM14.6242 10.3C14.6242 11.0733 14.3755 11.7 13.878 12.18C13.3805 12.6333 12.7521 12.86 11.9928 12.86C11.0764 12.86 10.3171 12.5533 9.71484 11.94C9.13881 11.3266 8.85079 10.4467 8.85079 9.29999C8.85079 8.07332 9.19117 6.87332 9.87194 5.69999C10.5789 4.49999 11.5608 3.55332 12.8176 2.85999L13.7209 4.25999C13.0401 4.73999 12.4903 5.27332 12.0713 5.85999C11.6786 6.44666 11.4168 7.12666 11.2858 7.89999C11.5215 7.79332 11.7964 7.73999 12.1106 7.73999C12.8437 7.73999 13.446 7.97999 13.9173 8.45999C14.3886 8.93999 14.6242 9.55333 14.6242 10.3Z"
+                  fill="currentColor"></path>
+              </svg>
+
+              <div class="relative z-10">
+                <p class="text-gray-800 sm:text-xl dark:text-white">
+                  <em>
+                    I just wanted to say that I'm very happy with my purchase so
+                    far. The documentation is outstanding - clear and detailed.
+                  </em>
+                </p>
+              </div>
+
+              <footer class="mt-6">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      class="size-10 rounded-full object-cover object-top"
+                      src="./public/assets/img/Umair.jpg"
+                      alt="Image Description" />
+                  </div>
+                  <div class="ms-4">
+                    <div
+                      class="text-base font-semibold text-gray-800 dark:text-gray-400">
+                      Umair Ahmad
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </blockquote>
+            <blockquote class="relative">
+              <svg
+                class="absolute -top-6 -start-8 size-16 text-gray-400 dark:text-gray-700"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path
+                  d="M7.39762 10.3C7.39762 11.0733 7.14888 11.7 6.6514 12.18C6.15392 12.6333 5.52552 12.86 4.76621 12.86C3.84979 12.86 3.09047 12.5533 2.48825 11.94C1.91222 11.3266 1.62421 10.4467 1.62421 9.29999C1.62421 8.07332 1.96459 6.87332 2.64535 5.69999C3.35231 4.49999 4.33418 3.55332 5.59098 2.85999L6.4943 4.25999C5.81354 4.73999 5.26369 5.27332 4.84476 5.85999C4.45201 6.44666 4.19017 7.12666 4.05926 7.89999C4.29491 7.79332 4.56983 7.73999 4.88403 7.73999C5.61716 7.73999 6.21938 7.97999 6.69067 8.45999C7.16197 8.93999 7.39762 9.55333 7.39762 10.3ZM14.6242 10.3C14.6242 11.0733 14.3755 11.7 13.878 12.18C13.3805 12.6333 12.7521 12.86 11.9928 12.86C11.0764 12.86 10.3171 12.5533 9.71484 11.94C9.13881 11.3266 8.85079 10.4467 8.85079 9.29999C8.85079 8.07332 9.19117 6.87332 9.87194 5.69999C10.5789 4.49999 11.5608 3.55332 12.8176 2.85999L13.7209 4.25999C13.0401 4.73999 12.4903 5.27332 12.0713 5.85999C11.6786 6.44666 11.4168 7.12666 11.2858 7.89999C11.5215 7.79332 11.7964 7.73999 12.1106 7.73999C12.8437 7.73999 13.446 7.97999 13.9173 8.45999C14.3886 8.93999 14.6242 9.55333 14.6242 10.3Z"
+                  fill="currentColor"></path>
+              </svg>
+
+              <div class="relative z-10">
+                <p class="text-gray-800 sm:text-xl dark:text-white">
+                  <em>
+                    I just wanted to say that I'm very happy with my purchase so
+                    far. The documentation is outstanding - clear and detailed.
+                  </em>
+                </p>
+              </div>
+
+              <footer class="mt-6">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      class="size-10 rounded-full object-cover object-top"
+                      src="./public/assets/img/haider.jpg"
+                      alt="Image Description" />
+                  </div>
+                  <div class="ms-4">
+                    <div
+                      class="text-base font-semibold text-gray-800 dark:text-gray-400">
+                      Haider Ahmad
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </blockquote>
+            <blockquote class="relative">
+              <svg
+                class="absolute -top-6 -start-8 size-16 text-gray-400 dark:text-gray-700"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path
+                  d="M7.39762 10.3C7.39762 11.0733 7.14888 11.7 6.6514 12.18C6.15392 12.6333 5.52552 12.86 4.76621 12.86C3.84979 12.86 3.09047 12.5533 2.48825 11.94C1.91222 11.3266 1.62421 10.4467 1.62421 9.29999C1.62421 8.07332 1.96459 6.87332 2.64535 5.69999C3.35231 4.49999 4.33418 3.55332 5.59098 2.85999L6.4943 4.25999C5.81354 4.73999 5.26369 5.27332 4.84476 5.85999C4.45201 6.44666 4.19017 7.12666 4.05926 7.89999C4.29491 7.79332 4.56983 7.73999 4.88403 7.73999C5.61716 7.73999 6.21938 7.97999 6.69067 8.45999C7.16197 8.93999 7.39762 9.55333 7.39762 10.3ZM14.6242 10.3C14.6242 11.0733 14.3755 11.7 13.878 12.18C13.3805 12.6333 12.7521 12.86 11.9928 12.86C11.0764 12.86 10.3171 12.5533 9.71484 11.94C9.13881 11.3266 8.85079 10.4467 8.85079 9.29999C8.85079 8.07332 9.19117 6.87332 9.87194 5.69999C10.5789 4.49999 11.5608 3.55332 12.8176 2.85999L13.7209 4.25999C13.0401 4.73999 12.4903 5.27332 12.0713 5.85999C11.6786 6.44666 11.4168 7.12666 11.2858 7.89999C11.5215 7.79332 11.7964 7.73999 12.1106 7.73999C12.8437 7.73999 13.446 7.97999 13.9173 8.45999C14.3886 8.93999 14.6242 9.55333 14.6242 10.3Z"
+                  fill="currentColor"></path>
+              </svg>
+
+              <div class="relative z-10">
+                <p class="text-gray-800 sm:text-xl dark:text-white">
+                  <em>
+                    I just wanted to say that I'm very happy with my purchase so
+                    far. The documentation is outstanding - clear and detailed.
+                  </em>
+                </p>
+              </div>
+
+              <footer class="mt-6">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      class="size-10 rounded-full object-cover object-top"
+                      src="./public/assets/img/zubair.jpg"
+                      alt="Image Description" />
+                  </div>
+                  <div class="ms-4">
+                    <div
+                      class="text-base font-semibold text-gray-800 dark:text-gray-400">
+                      Raja Muhammad Zubair
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- ========== END TESTIMONIALS ========== -->
+
+    <!-- ========== CONTACT-US ========== -->
+    <section
+      id="contact-us"
+      class="px-5 py-10 text-white bg-secondary dark:bg-zinc-700 text-center text-2xl">
+      <div>Ready to go?</div>
+      <div class="text-5xl">Give us a quick call</div>
+      <button
+        class="w-max mx-auto mt-7 px-6 py-2 z-20 bg-slime text-primary shadow-[0_0_10px_#ccf32f] hover:bg-opacity-90rounded-sm relative overflow-hidden transition-all duration-500 ease-out rounded-full font-semibold text-xl animate-bounce">
+        Contact us
+      </button>
+    </section>
+    <!-- ========== END CONTACT-US ========== -->
+
+    <!-- ========== FOOTER ========== -->
+    <footer
+      class="mt-10 text-gray-600 dark:bg-primary dark:text-white body-font">
+      <div
+        class="container px-5 py-5 mx-auto flex items-center sm:flex-row flex-col">
+        <a
+          href="./index.html"
+          class="flex title-font font-medium items-center md:justify-start justify-center">
+          <img
+            src="./public/assets/img/logo.png"
+            alt="logo"
+            class="h-12 invert dark:invert-0" />
+          <span class="ml-3 text-xl font-monospace">Voyager</span>
+        </a>
+        <p
+          class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+          © 2024 —
+          <a
+            href="https://www.figma.com/file/hnWY4BgAJBjxYWhmZgVu96/Travel-Agency-Website-(Community)?type=design&mode=design&t=eVMuXPwcHTzWAi6M-1"
+            class="dark:text-white ml-1 text-inherit"
+            rel="noopener noreferrer"
+            target="_blank"
+            >Design Inspiration 🖌️🎨</a
+          >
+        </p>
+        <span
+          class="inline-flex gap-1 sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start text-xl *:cursor-pointer">
+          <a
+            class="text-blue-600 hover:drop-shadow-[0px_0px_10px_currentcolor] drop-shadow-md">
+            <span class="sr-only">Facebook</span>
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            class="ml-3 text-zinc-900 dark:text-white hover:drop-shadow-[0px_0px_8px_currentcolor]">
+            <span class="sr-only">Twitter</span>
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a
+            href="#"
+            class="ml-3 text-[#E56969] hover:drop-shadow-[0px_0px_8px_currentcolor]">
+            <span class="sr-only">Instagram</span>
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="#"
+            class="ml-3 text-[#0E76A8] hover:drop-shadow-[0px_0px_8px_currentcolor]">
+            <span class="sr-only">Linked-In</span>
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </span>
+      </div>
+    </footer>
+    <!-- ========== END FOOTER ========== -->
+
+    <!-- Preline UI -->
+    <script type="module" src="./node_modules/preline/dist/preline.js"></script>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- fontawesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous" />
+    
+    <link rel="stylesheet" href="./style.css" />
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <title>Vite App</title>
+  </head>
+  <body
+    class="font-baloo scroll-smooth dark:bg-secondary dark:text-white overflow-x-hidden relative">
+    <!-- ========== HEADER ========== -->
+    <header
+      class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm fixed">
+      <nav
+        class="mt-6 relative max-w-[85rem] w-full bg-gray-600 bg-opacity-50 backdrop-blur-md rounded-[36px] mx-2 py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-6 lg:px-8 xl:mx-auto dark:bg-primary/[.8]"
+        aria-label="Global">
+        <div class="flex items-center justify-between">
+          <a
+            class="flex-none text-xl font-semibold dark:text-white"
+            href="./index.html"
+            aria-label="Brand">
+            <img src="./public/assets/img/logo.png" alt="" class="h-10 ml-5" />
+          </a>
+          <div class="md:hidden">
+            <button
+              type="button"
+              class="hs-collapse-toggle size-8 flex justify-center items-center text-sm font-semibold rounded-full border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+              data-hs-collapse="#navbar-collapse-with-animation"
+              aria-controls="navbar-collapse-with-animation"
+              aria-label="Toggle navigation">
+              <svg
+                class="hs-collapse-open:hidden flex-shrink-0 size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="3" x2="21" y1="6" y2="6" />
+                <line x1="3" x2="21" y1="12" y2="12" />
+                <line x1="3" x2="21" y1="18" y2="18" />
+              </svg>
+              <svg
+                class="hs-collapse-open:block hidden flex-shrink-0 size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          id="navbar-collapse-with-animation"
+          class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full md:block">
+          <div
+            class="flex flex-col gap-y-6 gap-x-0 mt-5 md:flex-row md:items-center items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:ps-7 text-lg">
+            <a
+              class="font-medium text-blue-600 md:py-6 dark:text-white"
+              href="#"
+              aria-current="page"
+              >Places</a
+            >
+            <a
+              class="font-medium text-zinc-100 hover:text-secondary md:py-6 dark:text-gray-400 dark:hover:text-white"
+              href="./about.html"
+              >About</a
+            >
+            <a
+              class="font-medium text-zinc-100 hover:text-secondary md:py-6 dark:text-gray-400 dark:hover:text-white"
+              href="#trips"
+              >Trips</a
+            >
+            <a
+              class="font-medium text-zinc-100 hover:text-secondary md:py-6 dark:text-gray-400 dark:hover:text-white"
+              href="#contact-us"
+              >Contact</a
+            >
+            <a
+              class="flex items-center gap-x-2 font-medium text-white hover:text-secondary md:border-s md:border-gray-300 md:my-6 md:ps-6 dark:text-gray-400 dark:hover:text-white"
+              href="#">
+              <svg
+                class="flex-shrink-0 size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+              Log in
+            </a>
+            <button
+              type="button"
+              class="ml-8 hs-dark-mode-active:hidden hs-dark-mode group flex items-center hover:text-blue-600 font-medium dark:text-gray-400 dark:hover:text-white"
+              data-hs-theme-click-value="dark">
+              <svg
+                class="flex-shrink-0 size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+              </svg>
+              <span class="sr-only">Dark Theme</span>
+            </button>
+            <button
+              type="button"
+              class="ml-8 hs-dark-mode-active:block hidden hs-dark-mode group flex items-center text-gray-600 hover:text-blue-600 font-medium dark:text-gray-400 dark:hover:text-white"
+              data-hs-theme-click-value="light">
+              <svg
+                class="flex-shrink-0 size-5"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#Ebb11d"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 8a2 2 0 1 0 4 4" />
+                <path d="M12 2v2" />
+                <path d="M12 20v2" />
+                <path d="m4.93 4.93 1.41 1.41" />
+                <path d="m17.66 17.66 1.41 1.41" />
+                <path d="M2 12h2" />
+                <path d="M20 12h2" />
+                <path d="m6.34 17.66-1.41 1.41" />
+                <path d="m19.07 4.93-1.41 1.41" />
+              </svg>
+              <span class="sr-only">Light Theme</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- ========== END HEADER ========== -->
+
+    <main class="container min-h-screen pt-28">
+      <h1 class="text-5xl text-center">About Us</h1>
+      <p class="pt-3 pb-8">
+        🌍 Welcome to
+        <span
+          class="font-bold text-xl bg-gradient-to-t from-green-400 to-slime bg-clip-text text-transparent"
+          >Voyager</span
+        >, where we specialize in crafting unforgettable travel experiences that
+        span the globe. 🌟 Based in Pakistan, our passion for exploration knows
+        no bounds as we curate personalized journeys that showcase the rich
+        tapestry of cultures, landscapes, and adventures our world has to offer.
+        🗺️ From the majestic mountains of the Himalayas to the vibrant streets
+        of Marrakech, we're dedicated to creating immersive experiences that
+        leave a lasting impression. Join us on a journey of discovery, and let's
+        explore the world together! ✈️🌏 #DiscoverWithVoyager 🌟
+      </p>
+
+      <section class="my-5">
+        <h3 class="text-3xl font-bold">Our Team</h3>
+        <section class="">
+          <div class="flex flex-wrap mx-auto md:flex-nowrap p-12">
+            <a href="">
+              <div class="flex w-full">
+                <div
+                  class="relative flex flex-col items-start m-1 transition duration-300 ease-in-out delay-150 transform bg-white dark:bg-zinc-800 shadow-2xl rounded-xl md:w-80 md:-ml-16 md:hover:-translate-x-16 md:hover:-translate-y-8">
+                  <img
+                    class="object-cover object-top w-full rounded-t-xl lg:h-[230px] md:h-64"
+                    src="./public/assets/img/Umair.jpg"
+                    alt="blog" />
+                  <div class="px-6 py-4">
+                    <h4
+                      class="mt-4 text-2xl font-semibold text-neutral-600 dark:text-gray-100">
+                      <span class="dark:text-slime">Umair Ahmad</span>
+                      <span class="text-sm block"
+                        >Co-founder and Chief Staff Officer</span
+                      >
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="flex w-full">
+                <div
+                  class="relative flex flex-col items-start m-1 transition duration-300 ease-in-out delay-150 transform bg-white dark:bg-zinc-800 shadow-2xl rounded-xl md:w-80 md:-ml-16 md:hover:-translate-x-16 md:hover:-translate-y-8">
+                  <img
+                    class="object-cover object-top w-full rounded-t-xl lg:h-[230px] md:h-64"
+                    src="./public/assets/img/zubair.jpg"
+                    alt="blog" />
+                  <div class="px-6 py-4">
+                    <h4
+                      class="mt-4 text-2xl font-semibold text-neutral-600 dark:text-gray-100">
+                      <span class="dark:text-slime">Raja Muhammad Zubair</span>
+                      <span class="text-sm block"
+                        >Co-founder and Chief Executive Officer</span
+                      >
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="flex w-full">
+                <div
+                  class="relative flex flex-col items-start m-1 transition duration-300 ease-in-out delay-150 transform bg-white dark:bg-zinc-800 shadow-2xl rounded-xl md:w-80 md:-ml-16 md:hover:-translate-x-16 md:hover:-translate-y-8">
+                  <img
+                    class="object-cover object-top w-full rounded-t-xl lg:h-[230px] md:h-64"
+                    src="./public/assets/img/haider.jpg"
+                    alt="blog" />
+                  <div class="px-6 py-4">
+                    <h4
+                      class="mt-4 text-2xl font-semibold text-neutral-600 dark:text-gray-100">
+                      <span class="dark:text-slime">Haider Ahmad Ashraf</span>
+                      <span class="text-sm block"
+                        >Co-founder and Chief Strategy Officer</span
+                      >
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="flex w-full">
+                <div
+                  class="relative flex flex-col items-start m-1 transition duration-300 ease-in-out delay-150 transform bg-white dark:bg-zinc-800 shadow-2xl rounded-xl md:w-80 md:-ml-16 md:hover:-translate-x-16 md:hover:-translate-y-8">
+                  <img
+                    class="object-cover object-top w-full rounded-t-xl lg:h-[230px] md:h-64"
+                    src="./public/assets/img/sharoon.jpg"
+                    alt="blog" />
+                  <div class="px-6 py-4">
+                    <h4
+                      class="mt-4 text-2xl font-semibold text-neutral-600 dark:text-gray-100">
+                      <span class="dark:text-slime">Sharoon Shaleem</span>
+                      <span class="text-sm block">Co-founder and Chairman</span>
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+      </section>
+
+      <h2 class="text-3xl mb-8">
+        Your question's <span class="block">answered</span>
+      </h2>
+
+      <div class="hs-accordion-group">
+        <div
+          class="hs-accordion hs-accordion-active:border-gray-200 bg-white border border-transparent first:rounded-t-xl last:rounded-b-xl dark:hs-accordion-active:border-neutral-700 dark:bg-neutral-800 dark:border-transparent"
+          id="hs-active-bordered-heading-one">
+          <button
+            class="hs-accordion-toggle hs-accordion-active:text-blue-600 inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-gray-800 py-4 px-5 hover:text-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-slime dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:outline-none"
+            aria-controls="hs-basic-active-bordered-collapse-one">
+            Question #1
+            <svg
+              class="hs-accordion-active:hidden block size-3.5"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="M12 5v14"></path>
+            </svg>
+            <svg
+              class="hs-accordion-active:block hidden size-3.5"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+            </svg>
+          </button>
+          <div
+            id="hs-basic-active-bordered-collapse-one"
+            class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+            aria-labelledby="hs-active-bordered-heading-one">
+            <div class="pb-4 px-5">
+              <p class="text-gray-800 dark:text-neutral-200">
+                <em class="block">This is the first item's accordion body.</em>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+                placeat voluptates nam dolor exercitationem! Obcaecati
+                aspernatur, vel iure pariatur labore numquam! Dolor culpa
+                repellat voluptatibus laboriosam ab. Corrupti, harum veniam.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="hs-accordion hs-accordion-active:border-gray-200 bg-white border border-transparent first:rounded-t-xl last:rounded-b-xl dark:hs-accordion-active:border-neutral-700 dark:bg-neutral-800 dark:border-transparent"
+          id="hs-active-bordered-heading-one">
+          <button
+            class="hs-accordion-toggle hs-accordion-active:text-blue-600 inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-gray-800 py-4 px-5 hover:text-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-slime dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:outline-none"
+            aria-controls="hs-basic-active-bordered-collapse-one">
+            Question #2
+            <svg
+              class="hs-accordion-active:hidden block size-3.5"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="M12 5v14"></path>
+            </svg>
+            <svg
+              class="hs-accordion-active:block hidden size-3.5"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+            </svg>
+          </button>
+          <div
+            id="hs-basic-active-bordered-collapse-one"
+            class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+            aria-labelledby="hs-active-bordered-heading-one">
+            <div class="pb-4 px-5">
+              <p class="text-gray-800 dark:text-neutral-200">
+                <em class="block">This is the second item's accordion body.</em>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+                placeat voluptates nam dolor exercitationem! Obcaecati
+                aspernatur, vel iure pariatur labore numquam! Dolor culpa
+                repellat voluptatibus laboriosam ab. Corrupti, harum veniam.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="hs-accordion hs-accordion-active:border-gray-200 bg-white border border-transparent first:rounded-t-xl last:rounded-b-xl dark:hs-accordion-active:border-neutral-700 dark:bg-neutral-800 dark:border-transparent"
+          id="hs-active-bordered-heading-one">
+          <button
+            class="hs-accordion-toggle hs-accordion-active:text-blue-600 inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-gray-800 py-4 px-5 hover:text-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-slime dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:outline-none"
+            aria-controls="hs-basic-active-bordered-collapse-one">
+            Question #3
+            <svg
+              class="hs-accordion-active:hidden block size-3.5"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="M12 5v14"></path>
+            </svg>
+            <svg
+              class="hs-accordion-active:block hidden size-3.5"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+            </svg>
+          </button>
+          <div
+            id="hs-basic-active-bordered-collapse-one"
+            class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+            aria-labelledby="hs-active-bordered-heading-one">
+            <div class="pb-4 px-5">
+              <p class="text-gray-800 dark:text-neutral-200">
+                <em class="block">This is the third item's accordion body.</em>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+                placeat voluptates nam dolor exercitationem! Obcaecati
+                aspernatur, vel iure pariatur labore numquam! Dolor culpa
+                repellat voluptatibus laboriosam ab. Corrupti, harum veniam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer
+      class="mt-10 text-gray-600 dark:bg-primary dark:text-white body-font">
+      <div
+        class="container px-5 py-5 mx-auto flex items-center sm:flex-row flex-col">
+        <a
+          href="./index.html"
+          class="flex title-font font-medium items-center md:justify-start justify-center">
+          <img
+            src="./public/assets/img/logo.png"
+            alt="logo"
+            class="h-12 invert dark:invert-0" />
+          <span class="ml-3 text-xl font-monospace">Voyager</span>
+        </a>
+        <p
+          class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+          © 2024 —
+          <a
+            href="https://www.figma.com/file/hnWY4BgAJBjxYWhmZgVu96/Travel-Agency-Website-(Community)?type=design&mode=design&t=eVMuXPwcHTzWAi6M-1"
+            class="dark:text-white ml-1 text-inherit"
+            rel="noopener noreferrer"
+            target="_blank"
+            >Design Inspiration 🖌️🎨</a
+          >
+        </p>
+        <span
+          class="inline-flex gap-1 sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start text-xl *:cursor-pointer">
+          <a
+            class="text-blue-600 hover:drop-shadow-[0px_0px_10px_currentcolor] drop-shadow-md">
+            <span class="sr-only">Facebook</span>
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            class="ml-3 text-zinc-900 dark:text-white hover:drop-shadow-[0px_0px_8px_currentcolor]">
+            <span class="sr-only">Twitter</span>
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a
+            href="#"
+            class="ml-3 text-[#E56969] hover:drop-shadow-[0px_0px_8px_currentcolor]">
+            <span class="sr-only">Instagram</span>
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="#"
+            class="ml-3 text-[#0E76A8] hover:drop-shadow-[0px_0px_8px_currentcolor]">
+            <span class="sr-only">Linked-In</span>
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </span>
+      </div>
+    </footer>
+    <!-- ========== END FOOTER ========== -->
+
+    <!-- Preline UI -->
+    <script type="module" src="./node_modules/preline/dist/preline.js"></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
