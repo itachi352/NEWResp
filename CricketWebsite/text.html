@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid black;
+        width: 50px;
+        height: 50px;
+        
+      }
+      .bordering
+      {
+        height: 5px;
+        background: linear-gradient(to right,red, green,dodgerblue);
+      }
+      .underbordering
+      {
+        height: 5px;
+        border-radius:2px ;
+        position: relative;
+        z-index: 2;
+        background: linear-gradient(to left,red, green,dodgerblue);
+        animation: background 10s infinite linear;
+      }
+      @keyframes background {
+        from{
+          transform: translateX(-100%);
+        }
+        to{
+          transform: translateX(100%);
+        }
+      }
+
+      .cricle{
+      height: 50px;
+      width: 50px;
+      border: solid black;
+      border-radius: 50%;
+      transition: rot 2s infinite linear;
+      }
+      @keyframes rot{
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="box">Box1</div>
+      <div class="box">Box2</div>
+      <div class="box">Box3</div>
+      <div class="box">Box4</div>
+      <div class="box">Box5</div>
+      <div class="box">Box6</div>
+      <div class="box">Box7</div>
+      <div class="box">Box8</div>
+      <div class="box">Box9</div>
+      <div class="box">Box10</div>
+      <div class="box">Box11</div>
+      <div class="box">Box12</div>
+      <div class="box">Box13</div>
+      <div class="box">Box14</div>
+      <div class="box">Box15</div>
+    </div>
+    <div class="bordering">
+      <div class="underbordering"></div>
+    </div>
+    <div class="cricle">
+
+    </div>
+
+
+    <script>
+      let boxx=document.getElementById('container')
+      let count=Math.random()*15;
+      let co=parseInt(count);
+      boxx.children[co].style.backgroundColor="red"
+      boxx.children[co+1%15].style.backgroundColor="dodgerblue"
+      boxx.children[co+3%15].style.backgroundColor="green"
+      boxx.children[co+5%15].style.backgroundColor="orange"
+      
+     
+
+    </script>
+  </body>
+</html>

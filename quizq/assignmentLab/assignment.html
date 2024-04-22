@@ -37,6 +37,21 @@
       .navbar-brand {
         color: #2e333f;
       }
+      #logo {
+        img {
+          width: 50px;
+          height: 50px;
+          animation: eye 2s linear infinite;
+        }
+      }
+      @keyframes eye {
+        form {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
     </style>
 
     <title>Bootstrap | Landing page</title>
@@ -44,7 +59,7 @@
   <body>
     <nav class="navbar navbar-expand-lg border-bottom border-2 border-info">
       <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <a class="navbar-brand d-flex align-items-center" id="logo" href="#">
           <img src="./pngwing.com.png" width="75" alt="logo" />
           <span class="display-5 fw-bold">Sharingan</span>
         </a>

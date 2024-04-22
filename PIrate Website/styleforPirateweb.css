@@ -179,8 +179,8 @@ i:hover {
     padding: 2rem;
     aspect-ratio: 16/9;
     overflow: hidden;
-    border-radius: 10px;
     perspective: 1000px;
+    border-radius: 10px;
 }
 
 .flip-card-inner {
